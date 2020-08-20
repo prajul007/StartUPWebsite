@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Sign_in</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+    {% load static %}
+	<link rel="stylesheet" type="text/css" href="{% static 'css/sign_up.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/sign_up1.css' %}">
+<!--===============================================================================================-->
+	</head>
+<body>
+
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100 p-t-30 p-b-50">
+				<span class="login100-form-title p-b-41">
+					Account Signup
+				</span>
+				{% if registered %}
+				<div class="jumbotron">
+				<h1>THANK YOU FOR REGISTERING</h1>
+				</div>
+				{% else %}
+				<form class="login100-form validate-form p-b-33 p-t-5" method= "POST" >
+					{% csrf_token %}
+					<div class="wrap-input100 validate-input" data-validate = "Username">
+						<input class="input100" type="text" name= "Username"  placeholder="User name">
+						<span class="focus-input100" data-placeholder="&#xe82a;"></span>
+					</div>
+                    <div class="wrap-input100 validate-input" data-validate = "fname">
+						<input class="input100" type="text" name="fname" placeholder="FIRST NAME ">
+						<span class="focus-input100" data-placeholder="&#xe82a;"></span>
+                    </div>
+					<div class="wrap-input100 validate-input" data-validate = "lname">
+						<input class="input100" type="text" name="lname" placeholder="LAST NAME ">
+						<span class="focus-input100" data-placeholder="&#xe82a;"></span>
+                    </div>
+                    <div class="wrap-input100 validate-input" data-validate = "Mobile No.">
+						<input class="input100" type="tel" name="phone" placeholder="mobile">
+						<span class="focus-input100" data-placeholder="&#xe82a;"></span>
+                    </div>
+                    <div class="wrap-input100 validate-input" data-validate = "Email-id">
+						<input class="input100" type="email" name="email" placeholder="Email">
+						<span class="focus-input100" data-placeholder="&#xe82a;"></span>
+					</div>
+					<!-- <div class="wrap-input100 validate-input" data-validate = "startup" id="entre-invest">
+						<label class="input100" for="startup">Choose a type :</label>
+
+                       <select class="input100" id="startup">
+                         <option  value="entre">Entrepreneur</option>
+                        <option  value="invest">Investor</option>
+
+                          </select>
+					</div> -->
+					<!-- Default unchecked -->
+<div class="custom-control custom-checkbox wrap-input100 validate-input" data-validate = "type" id="entre-invest">
+    <input type="checkbox" class="custom-control-input input100" name="is_entre" for="startup" id="defaultUnchecked">
+    <label class="custom-control-label input100" for="defaultUnchecked">Entrepreneur</label>
+
+    <input type="checkbox" class="custom-control-input input100" name="is_investor" for="startup" id="defaultUnchecked">
+    <label class="custom-control-label input100 startup"  for="defaultUnchecked">Investor</label>
+</div>
+					<div class="wrap-input100 validate-input" data-validate="Password">
+						<input class="input100" type="password" name="password" placeholder="Password">
+						<span class="focus-input100" data-placeholder="&#xe80f;"></span>
+					</div>
+					<div class="container-login100-form-btn m-t-32">
+						<input type="submit" class="login100-form-btn">
+						</input>
+					</div>
+
+				</form>
+				{% endif %}
+			</div>
+		</div>
+	</div>
+	<div id="dropDownSelect1"></div>
+</body>
+</html>

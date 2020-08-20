@@ -1,0 +1,312 @@
+<!Doctype html>
+<html lang="en">
+  <head>
+  {% load static %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v3.8.6">
+    <title>STARTUP WEBSITE!!</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.4/examples/album/">
+
+    <!-- Bootstrap core CSS -->
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- Favicons -->
+<link rel="apple-touch-icon" href="/docs/4.4/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/docs/4.4/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/docs/4.4/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/docs/4.4/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="/docs/4.4/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
+<link rel="icon" href="/docs/4.4/assets/img/favicons/favicon.ico">
+<meta name="msapplication-config" content="/docs/4.4/assets/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#563d7c">
+
+<link rel="manifest" href="site.webmanifest">
+		<link rel="shortcut icon" type="image/x-icon" href="static/img/favicon.ico">
+
+		
+            <link rel="stylesheet" href="static/css/bootstrap.min.css">
+            <link rel="stylesheet" href="static/css/owl.carousel.min.css">
+            <link rel="stylesheet" href="static/css/slicknav.css">
+            <link rel="stylesheet" href="static/css/flaticon.css">
+            <link rel="stylesheet" href="static/css/animate.min.css">
+            <link rel="stylesheet" href="static/css/magnific-popup.css">
+            <link rel="stylesheet" href="static/css/fontawesome-all.min.css">
+            <link rel="stylesheet" href="static/css/themify-icons.css">
+            <link rel="stylesheet" href="static/css/slick.css">
+            <link rel="stylesheet" href="static/css/nice-select.css">
+            <link rel="stylesheet" href="static/css/style.css">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+           <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+   
+   <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+  </head>
+ <body>
+
+   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="{% url 'Home' %}">STARTUP WEBSITE</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link active"  href="{% url 'Home' %}">Home</a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link" href="{% url 'About' %}">About</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'EntreIndex' %}">Entrepreneur</a>
+            </li>
+             <li class="nav-item">
+          <a class="nav-link" href="{% url 'InvestIndex' %}">Investor</a>
+          </li>
+        <li class="nav-item">
+        <a class="nav-link" href="{% url 'MoreInfo' %}">Edit</a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link" href="{% url 'Contact' %}">Contact</a>
+        </li>
+
+  </ul>
+  </nav>
+
+ <div class="col-xl-2 col-lg-3 col-md-3">
+    <div class="header-left-btn f-right d-none d-lg-block">
+                                    {% if user %}
+                                    <h1>Welcome </h1>
+                                     <select onchange="window.location.href=this.value;">
+
+                                    <option id="logout" value="http://127.0.0.1:8000/logout/">Logout</option>
+                                    </select>
+                                    {% else %}
+                                        <h1>Welcome </h1>
+                                    <select onchange="window.location.href=this.value;">
+
+                                    <option id="login" value="http://127.0.0.1:8000/login/">Login</option>
+                                    <option id="sign_up" value="http://127.0.0.1:8000/sign_up">Sign_up</option>
+                                    </select>
+
+                                    {% endif %}
+                                </div>
+                            </div>
+            </header>
+    <main>
+        
+                            
+<main role="main">
+  <section class="jumbotron text-center">
+    <div class="container">
+    <img src="static/img/b.jpg"  style="border-top-style:inset;
+  border-right-style: solid;
+  border-bottom-style:solid;
+  border-left-style: inset;border-width:15px;width:100%;height:700px;margin-top:100px;">
+  <br><br>
+      <h1 style="color:grey;">WELCOME TO STARTUP WEBSITE</h1>
+      <p class="lead text-muted">
+      During the earliest stages of starting a business, the last thing you should concern yourself with is writing lengthy plans <br>
+      or long-winded executive summaries.
+     It's time to kill the traditional business plan in favor of a <br>
+     realistic, practical tool: a one-paragraph startup plan with the latest website-STARTUP WEBSITE.
+     <br>To get started, you must have answers to key questions about your business and its prospective customers. <br>
+     Answer each of the following questions completely, honestly and in no more than one or two sentences.
+  <br>So start now what are you waiting for!!! 
+     
+        
+      </p>
+    </div>
+  </section>
+
+</main>
+     <div class="wantToWork-area w-padding">
+            <div class="container">
+                <div class="row align-items-end">
+                    <div class="col-xl-5 col-lg-7 col-md-8">
+                        <div class="wantToWork-caption">
+                            <p>Once you’ve settled on a business</p>
+                            <h2>High Performance Services For Multiple Industries.</h2>
+                        </div>
+                    </div>
+                    <div class="col-xl-7 col-lg-5 col-md-4">
+                       <div class="wantToWork-btn f-right">
+                            <a href="#" class="btn btn-ans">view more</a>
+                       </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+ <div class="our-services  pt-50 pb-150">
+            <div class="container">
+                <div class="row">
+                    <div class=" col-lg-4 col-md-6 col-sm-6">
+                        <div class="single-services text-center mb-30">
+                            <div class="services-ion">
+                                <span class="flaticon-experience"></span>
+                            </div>
+                            <div class="services-cap">
+                                <h5>ENTREPRENEUR</h5>
+                                <p>Be the first one to make your ideas known to the world</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" col-lg-4 col-md-6 col-sm-6">
+                        <div class="single-services text-center mb-30">
+                            <div class="services-ion">
+                                <span class="flaticon-pay"></span>
+                            </div>
+                            <div class="services-cap">
+                                <h5>Investor</h5>
+                                <p>Invest in the idea you like</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class=" col-lg-4 col-md-6 col-sm-6">
+                        <div class="single-services text-center mb-30">
+                            <div class="services-ion">
+                                <span class="flaticon-good"></span>
+                            </div>
+                            <div class="services-cap">
+                                <h5>Idea</h5>
+                                <p>Idea is something whether good or bad makes the future</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      
+        
+        </div>
+
+
+ <div class="wantToWork-area wantToWork-area2 w-padding2">
+            <div class="container">
+                <div class="row align-items-center justify-content-between">
+                    <div class="col-xl-8 col-lg-8 col-md-8">
+                        <div class="wantToWork-caption wantToWork-caption2">
+                            <h2>Send us a message if you have any issue with the site.</h2>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-lg-4 col-md-4">
+                        <a href="mailto:jainaanya2000@gmail.com" class="btn btn-primary my-2">contact us now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-area">
+            <div class="container">
+               <div class="footer-top footer-padding">
+                    <div class="row justify-content-between">
+                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6">
+                            <div class="single-footer-caption mb-50">
+                                <div class="single-footer-caption mb-30">
+                                  
+                                    <div class="footer-logo">
+                                        <a href="index.html"><img src="static/img/logo/logo2_footer.png" alt=""></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6">
+                            <div class="single-footer-caption mb-50">
+                                <div class="footer-tittle">
+                                    <h4><span></span>+918950501910</h4>
+                                    <h4><span></span>+916379229926</h4>
+                                    <ul>
+                                        <li><a href="#">jainaanya2000@gmail.com</a></li>
+                                         <li><a href="#">prajulgupta2000@gmail.com</a></li>
+                                    </ul>
+                                    <p>130,Mansarover Colony,Rohtak,Haryana </p>
+                                    <p>Indore,Madhya Pradesh</p>
+                                </div>
+                                
+                                <div class="footer-social">
+                                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                    <a href="#"><i class="fas fa-globe"></i></a>
+                                    <a href="#"><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+               </div>
+                <div class="footer-bottom">
+                    <div class="row">
+                        <div class="col-xl-12 ">
+                            <div class="footer-copy-right">
+                                
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This website  is made by Aanya Jain and Prajul Gupta
+</p>
+                            </div>
+                        </div>
+                    </div>
+               </div>
+            </div>
+        </div>
+        
+    </footer>
+  
+    <div id="back-top" >
+        <a title="Go to Top" href="#"> <i class="fas fa-level-up-alt"></i></a>
+    </div>
+
+        <script src="static/js/vendor/modernizr-3.5.0.min.js"></script>
+		
+		<script src="static/js/vendor/jquery-1.12.4.min.js"></script>
+        <script src="static/js/popper.min.js"></script>
+        <script src="static/js/bootstrap.min.js"></script>
+	
+        <script src="static/js/jquery.slicknav.min.js"></script>
+
+		
+        <script src="static/js/owl.carousel.min.js"></script>
+        <script src="static/js/slick.min.js"></script>
+
+        <script src="static/js/wow.min.js"></script>
+		<script src="static/js/animated.headline.js"></script>
+        <script src="static/js/jquery.magnific-popup.js"></script>
+
+
+        <script src="static/js/jquery.nice-select.min.js"></script>
+		<script src="static/js/jquery.sticky.js"></script>
+        
+      
+        <script src="static/js/contact.js"></script>
+        <script src="static/js/jquery.form.js"></script>
+        <script src="static/js/jquery.validate.min.js"></script>
+        <script src="static/js/mail-script.js"></script>
+        <script src="static/js/jquery.ajaxchimp.min.js"></script>
+  
+        <script src="static/js/plugins.js"></script>
+        <script src="static/js/main.js"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    </body>
+</html>
+
